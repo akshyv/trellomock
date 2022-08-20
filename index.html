@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title_text">
+        <h1>Trello Board</h1>
+        <div id="userInput">
+            <input type="text" placeholder="Text">
+            <button onclick="returnText()">Submit</button>
+        </div>
+    </div>    
+
+    <div class="panelarea">
+        
+        <div id="p1" class="panel">        
+            <h4>To do</h4>  
+            <div id="To_do" class="list">          
+            </div>
+        </div>
+
+        <div id ="p2" class="panel">        
+            <h4>On Progress</h4>       
+            <div id="on_progress" class="list" ondragover="onDragOver(event)" ondrop="onDrop(event)">          
+            </div>
+        </div>
+
+        <div id="p3"class="panel">        
+            <h4>Done</h4>       
+            <div id="done"class="list" ondragover="onDragOver(event)" ondrop="onDrop(event)">        
+            </div>
+        </div>
+
+    </div>
+    <!-- https://medium.com/@flavtech/the-ultimate-javascript-full-stack-roadmap-for-2022-cc4aa3d452f -->
+    <script src="trello.js"></script>    
+</body>
