@@ -5,8 +5,10 @@
     <div class="title_text">
         <h1>Trello Board</h1>
         <div id="userInput">
-            <input type="text" placeholder="Text">
-            <button onclick="returnText()">Submit</button>
+            <input type="text" placeholder="Text" onkeydown = "if (event.keyCode == 13)
+            document.getElementById('btn').click()"> 
+            <!-- enter button activates the button btn -->
+            <button id="btn" type="submit">Submit</button>
         </div>
     </div>    
 
@@ -29,8 +31,6 @@
             <div id="done"class="list" ondragover="onDragOver(event)" ondrop="onDrop(event)">        
             </div>
         </div>
-
-    </div>
-    <!-- https://medium.com/@flavtech/the-ultimate-javascript-full-stack-roadmap-for-2022-cc4aa3d452f -->
+    </div>    
     <script src="trello.js"></script>    
 </body>

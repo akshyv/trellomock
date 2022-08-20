@@ -1,5 +1,8 @@
-function returnText() {
-  var input = document.querySelector("#userInput input").value;
+const btn = document.getElementById("btn");
+btn.addEventListener("click", function handleClick(event) {
+  event.preventDefault();
+  var firstNameInput = document.querySelector("#userInput input");
+  var input = firstNameInput.value;
   if (input.length == 0) {
     alert("type a new task to submit");
   } else {
@@ -11,8 +14,8 @@ function returnText() {
             </span>
         </div>`;
   }
-}
-
+  firstNameInput.value = "";
+});
 function onDragStart(event) {
   event.dataTransfer.setData("text/plain", event.target.id);
 }
