@@ -4,14 +4,15 @@
 }
 
 .panel {
-    width: 30%;
-    text-align: center;
+    width: 30%;    
     height: 30%;
     border-style: groove;
     border: 15px solid dark black;
     padding: 30px 20px;
     margin: 20px;
     background: transparent;
+    text-align: center;
+    align-content: center;
 }
 
 .panel h4 {
@@ -32,7 +33,11 @@
     width: auto;
     height: auto;
     padding:  20px;
+    padding-right: 40px;
     margin-top: 10px;
+    display:flex;
+    flex-direction: column-reverse;
+    align-self: center;
     
 }
 
