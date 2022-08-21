@@ -17,21 +17,17 @@
 
 .panel h4 {
     color:rgb(33, 83, 92);
-    align-self: center;
-    padding: 0%;   
-    
+    align-self: center;    
 }
 
 .title_text {
     color: #4CAF50;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     margin: 20px;
 }
 
-.list {      
-    width: auto;
-    height: auto;
+.list {
     padding:  20px;
     padding-right: 40px;
     margin-top: 10px;
@@ -41,21 +37,25 @@
     
 }
 
-.row {
-    width: 100%;
-    text-align: center;
-    display:flex;
-}
-
-button {
+#btn {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
     padding: 15px 50px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 15px;
+}
+
+#delete {    
+    background-color: #ca2115;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    left: 25%;
+    position: relative;
 }
 
 .tasks {
@@ -70,32 +70,10 @@ button {
     text-align: center;
 }
 
- #tasks {    
-    display: block;
-    width: 100%;
-    padding: 8px 16px;
-    line-height: 25px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: inherit;
-    border: 1px solid #939697;
-    border-radius: 6px;
-    -webkit-appearance: none;
-    color: var(#000);
-    border: 1px solid var(--input-border);
-    background: var(--input-background);
-    transition: border .3s ease;    
-}
-
 #userInput {
     position: relative;
     display: flex;
     width: 25%; 
     border-radius: 5px;
     background-color: #ebeff0; 
-}
-
-#userInput #tasks {
-    white-space: nowrap;
-    display: block;
 }

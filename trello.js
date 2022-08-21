@@ -11,10 +11,20 @@ btn.addEventListener("click", function handleClick(event) {
               document.querySelector("#userInput input").value
             } class="tasks" draggable="true" ondragstart="onDragStart(event)" ondragover="onDragOver(event)" > 
                 ${document.querySelector("#userInput input").value}
-            </span>
+              <button id="delete"class="delete">
+                <i class="far fa-trash-alt"></i>
+                Delete
+              </button>
+            </span>            
         </div>`;
   }
   firstNameInput.value = "";
+  var current_tasks = document.querySelectorAll(".delete");
+  for (var i = 0; i < current_tasks.length; i++) {
+    current_tasks[i].onclick = function () {
+      this.parentNode.remove();
+    };
+  }
 });
 function onDragStart(event) {
   event.dataTransfer.setData("text/plain", event.target.id);
@@ -26,7 +36,6 @@ function onDragOver(event) {
 function onDrop(event) {
   let sourceId = event.dataTransfer.getData("text/plain");
   let sourceIdEl = document.getElementById(sourceId);
-  console.log("this is source id ele", sourceIdEl);
   let sourceIdParentEl = sourceIdEl.parentElement;
   let targetEl = document.getElementById(event.target.id);
   let targetParentEl = targetEl.parentElement;
